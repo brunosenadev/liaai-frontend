@@ -74,9 +74,10 @@ export default function Home() {
             'Content-Type': 'multipart/form-data',
           },
           responseType: 'blob', 
+          withCredentials: true, 
         }
       );
-  
+      
       if (response && response.data instanceof Blob) {
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement("a");
