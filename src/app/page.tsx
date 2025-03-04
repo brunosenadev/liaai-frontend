@@ -67,7 +67,7 @@ export default function Home() {
       formData.append("file", file);
   
       const response = await axios.post(
-        `https://liaai.onrender.com/traduzir-arquivo/?src_lang=${srcLang}&tgt_lang=${tgtLang}`,
+        `http://localhost:8000/traduzir-arquivo/?src_lang=${srcLang}&tgt_lang=${tgtLang}`,
         formData,
         {
           headers: {
